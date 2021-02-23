@@ -1,0 +1,298 @@
+Using pre-set license
+Built from '2020.2/release' branch; Version is '2020.2.2f1 (068178b99f32) revision 426360'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Home; OS build 18363.1379; Version 1909; 64bit' Language: 'en' Physical Memory: 16244 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2020.2.2f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+C:/Users/Mathieu/Desktop/Dossier/Dossier/Unity/Projects/CoopScape
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+59862
+Successfully changed project path to: C:/Users/Mathieu/Desktop/Dossier/Dossier/Unity/Projects/CoopScape
+C:/Users/Mathieu/Desktop/Dossier/Dossier/Unity/Projects/CoopScape
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 55.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.2.2f1 (068178b99f32)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.2.2f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/Mathieu/Desktop/Dossier/Dossier/Unity/Projects/CoopScape/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce MX150 (ID=0x1d10)
+    Vendor:   
+    VRAM:     1983 MB
+    Driver:   27.21.14.6140
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.2.2f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.2.2f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.2.2f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56312
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.2f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.003862 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 92.18 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.526 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.006193 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.76 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Find all reader and writers took 181 milliseconds
+Script Module: UnityEngine.UI.dll
+Weave behaviours and messages took171 milliseconds
+Find all reader and writers took 123 milliseconds
+Script Module: SimpleWebTransport.dll
+Weave behaviours and messages took13 milliseconds
+Find all reader and writers took 144 milliseconds
+Script Module: UnityEngine.TestRunner.dll
+Weave behaviours and messages took59 milliseconds
+Find all reader and writers took 128 milliseconds
+Script Module: Mirror.Cloud.dll
+Weave behaviours and messages took9 milliseconds
+Find all reader and writers took 154 milliseconds
+Script Module: Unity.Timeline.dll
+Weave behaviours and messages took68 milliseconds
+Find all reader and writers took 151 milliseconds
+Script Module: Mirror.Examples.dll
+[Projectile] NetworkBehaviourProcessor
+[Tank] NetworkBehaviourProcessor
+[NetworkRoomPlayer] NetworkBehaviourProcessor
+[NetworkRoomPlayerExt] NetworkBehaviourProcessor
+[PlayerController] NetworkBehaviourProcessor
+[PlayerScore] NetworkBehaviourProcessor
+[RandomColor] NetworkBehaviourProcessor
+[Reward] NetworkBehaviourProcessor
+[AddForce] NetworkBehaviourProcessor
+[Ball] NetworkBehaviourProcessor
+[Player] NetworkBehaviourProcessor
+[MatchController] NetworkBehaviourProcessor
+[PhysicsCollision] NetworkBehaviourProcessor
+[PlayerController] NetworkBehaviourProcessor
+[PlayerScore] NetworkBehaviourProcessor
+[RandomColor] NetworkBehaviourProcessor
+[Reward] NetworkBehaviourProcessor
+[Player] NetworkBehaviourProcessor
+[MonsterMovement] NetworkBehaviourProcessor
+[PlayerMovement] NetworkBehaviourProcessor
+[Player] NetworkBehaviourProcessor
+[PlayerController] NetworkBehaviourProcessor
+[RandomColor] NetworkBehaviourProcessor
+[ShootingTankBehaviour] NetworkBehaviourProcessor
+Weave behaviours and messages took346 milliseconds
+  ProcessSitesModule Mirror.Examples.dll elapsed time:00:00:00.0379966
+Find all reader and writers took 115 milliseconds
+Script Module: Mirror.Components.dll
+[NetworkAnimator] NetworkBehaviourProcessor
+[NetworkRoomPlayer] NetworkBehaviourProcessor
+[NetworkLobbyPlayer] NetworkBehaviourProcessor
+[NetworkVisibility] NetworkBehaviourProcessor
+[NetworkVisibility] Found NetworkBehaviour Mirror.NetworkVisibility
+[NetworkVisibility] Process Start
+[NetworkVisibility]   GenerateSerialization
+[NetworkVisibility]   GenerateDeSerialization
+[NetworkVisibility] Process Done
+[NetworkMatchChecker] NetworkBehaviourProcessor
+[NetworkVisibility] NetworkBehaviourProcessor
+[NetworkOwnerChecker] NetworkBehaviourProcessor
+[NetworkVisibility] NetworkBehaviourProcessor
+[NetworkProximityChecker] NetworkBehaviourProcessor
+[NetworkRoomPlayer] NetworkBehaviourProcessor
+[NetworkVisibility] NetworkBehaviourProcessor
+[NetworkSceneChecker] NetworkBehaviourProcessor
+[NetworkTransformBase] NetworkBehaviourProcessor
+[NetworkTransform] NetworkBehaviourProcessor
+[NetworkTransformBase] NetworkBehaviourProcessor
+[NetworkTransformBase] NetworkBehaviourProcessor
+[NetworkTransformChild] NetworkBehaviourProcessor
+[NetworkLerpRigidbody] NetworkBehaviourProcessor
+[NetworkRigidbody] NetworkBehaviourProcessor
+[NetworkRigidbody2D] NetworkBehaviourProcessor
+[NetworkTransformBase] NetworkBehaviourProcessor
+[NetworkTransform] NetworkBehaviourProcessor
+[NetworkTransformBase] NetworkBehaviourProcessor
+[NetworkTransformBase] NetworkBehaviourProcessor
+[NetworkTransformChild] NetworkBehaviourProcessor
+Weave behaviours and messages took218 milliseconds
+  ProcessSitesModule Mirror.Components.dll elapsed time:00:00:00.0100012
+Find all reader and writers took 117 milliseconds
+Script Module: Unity.TextMeshPro.dll
+Weave behaviours and messages took108 milliseconds
+Find all reader and writers took 87 milliseconds
+Script Module: Mirror.Examples.Cloud.GUI.dll
+Weave behaviours and messages took6 milliseconds
+Find all reader and writers took 93 milliseconds
+Script Module: kcp2k.dll
+Weave behaviours and messages took8 milliseconds
+Find all reader and writers took 114 milliseconds
+Script Module: Telepathy.dll
+Weave behaviours and messages took4 milliseconds
+Find all reader and writers took 143 milliseconds
+Script Module: Assembly-CSharp-firstpass.dll
+Weave behaviours and messages took0 milliseconds
+Find all reader and writers took 125 milliseconds
+Script Module: Mirror.Authenticators.dll
+Weave behaviours and messages took142 milliseconds
+  ProcessSitesModule Mirror.Authenticators.dll elapsed time:00:00:00.0079978
+Find all reader and writers took 95 milliseconds
+Script Module: Assembly-CSharp.dll
+[netbehaviour] NetworkBehaviourProcessor
+Weave behaviours and messages took8 milliseconds
+Find all reader and writers took 104 milliseconds
+Script Module: Mirror.Examples.Cloud.Pong.dll
+[Ball] NetworkBehaviourProcessor
+[BallManager] NetworkBehaviourProcessor
+[Player] NetworkBehaviourProcessor
+Weave behaviours and messages took100 milliseconds
+  ProcessSitesModule Mirror.Examples.Cloud.Pong.dll elapsed time:00:00:00.0050017
+Find all reader and writers took 131 milliseconds
+Script Module: UnityEditor.TestRunner.dll
+Weave behaviours and messages took65 milliseconds
+Find all reader and writers took 128 milliseconds
+Script Module: UnityEditor.UI.dll
+Weave behaviours and messages took22 milliseconds
+Find all reader and writers took 128 milliseconds
+Script Module: ParrelSync.dll
+Weave behaviours and messages took4 milliseconds
+Find all reader and writers took 100 milliseconds
+Script Module: Mirror.CompilerSymbols.dll
+Weave behaviours and messages took0 milliseconds
+Mono: successfully reloaded assembly
+- Completed reload, in 10.119 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
+Refreshing native plugins compatible for Editor in 0.37 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1372 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 66.1 MB.
+System memory in use after: 66.2 MB.
+
+Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 1809.
+Total: 3.632600 ms (FindLiveObjects: 0.199700 ms CreateObjectMapping: 0.066300 ms MarkObjects: 3.238000 ms  DeleteObjects: 0.126700 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/Files/Scenes/MainMenu/Textures/nomap.png
+  artifactKey: Guid(a865895c251457f40b17efc342b0ddc6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Files/Scenes/MainMenu/Textures/nomap.png using Guid(a865895c251457f40b17efc342b0ddc6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd18795e6f28afd75ed08d0ea20adc11b') in 0.095849 seconds
+  Import took 0.101118 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 143.425935 seconds.
+  path: Assets/Files/Scenes/MainMenu/Textures/nomap.png
+  artifactKey: Guid(a865895c251457f40b17efc342b0ddc6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Files/Scenes/MainMenu/Textures/nomap.png using Guid(a865895c251457f40b17efc342b0ddc6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b760d8f24d59ff07a51b60b3441933f') in 0.022930 seconds
+  Import took 0.026697 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 16.103698 seconds.
+  path: Assets/Files/Scenes/MainMenu/Textures/nomap.png
+  artifactKey: Guid(a865895c251457f40b17efc342b0ddc6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Files/Scenes/MainMenu/Textures/nomap.png using Guid(a865895c251457f40b17efc342b0ddc6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '350009c03d285db94359df8f2decb445') in 0.063508 seconds
+  Import took 0.087822 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 37.294164 seconds.
+  path: Assets/Plugins/Mirror/Examples/Cloud/PongWithListServer/Sprites/Racket.png
+  artifactKey: Guid(bdb0ccb2f147a3d47abe396bd18c5dbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/Mirror/Examples/Cloud/PongWithListServer/Sprites/Racket.png using Guid(bdb0ccb2f147a3d47abe396bd18c5dbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f49f4ca13f7e460a64430810645f94d') in 0.017006 seconds
+  Import took 0.019866 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000392 seconds.
+  path: Assets/Plugins/Mirror/Examples/Pong/Sprites/Racket.png
+  artifactKey: Guid(619ccff3ba2f2a04f9ddd19c264a1ecd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/Mirror/Examples/Pong/Sprites/Racket.png using Guid(619ccff3ba2f2a04f9ddd19c264a1ecd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e3c8d6c25790c57564738d8e5579bbe9') in 0.012940 seconds
+  Import took 0.016214 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 75.839599 seconds.
+  path: Assets/Files/Scenes/MainMenu/Textures/border.png
+  artifactKey: Guid(f951112632901554f8458e6c39de088a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Files/Scenes/MainMenu/Textures/border.png using Guid(f951112632901554f8458e6c39de088a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '42d854f7bd4e98bc44415366a49be441') in 0.017045 seconds
+  Import took 0.023259 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.997336 seconds.
+  path: Assets/Files/Scenes/MainMenu/Textures/border.png
+  artifactKey: Guid(f951112632901554f8458e6c39de088a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Files/Scenes/MainMenu/Textures/border.png using Guid(f951112632901554f8458e6c39de088a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3da4c27501042510ec68160d2ab6d312') in 0.025300 seconds
+  Import took 0.028328 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 526.154507 seconds.
+  path: Assets/Files/Scenes/MainMenu/Textures/map1.png
+  artifactKey: Guid(188bb5d2425c3644da8e365e20e43d2e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Files/Scenes/MainMenu/Textures/map1.png using Guid(188bb5d2425c3644da8e365e20e43d2e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '69161282e0f86cbf043093a55a3c756d') in 0.062354 seconds
+  Import took 0.066185 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000307 seconds.
+  path: Assets/Files/Scenes/MainMenu/Textures/testmap.png
+  artifactKey: Guid(577be10fc91844244be7276849b9c223) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Files/Scenes/MainMenu/Textures/testmap.png using Guid(577be10fc91844244be7276849b9c223) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bc90ba247e0dceeb6c76d49a361cc5a4') in 0.017039 seconds
+  Import took 0.019969 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000323 seconds.
+  path: Assets/Files/Scenes/MainMenu/Textures/nomap.png
+  artifactKey: Guid(a865895c251457f40b17efc342b0ddc6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Files/Scenes/MainMenu/Textures/nomap.png using Guid(a865895c251457f40b17efc342b0ddc6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a5bd5a1fd68cbbc770fb71e0b2f36d3') in 0.023501 seconds
+  Import took 0.026454 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000339 seconds.
+  path: Assets/Files/Scenes/MainMenu/Textures/testmap.png
+  artifactKey: Guid(577be10fc91844244be7276849b9c223) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Files/Scenes/MainMenu/Textures/testmap.png using Guid(577be10fc91844244be7276849b9c223) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bc90ba247e0dceeb6c76d49a361cc5a4') in 0.020460 seconds
+  Import took 0.023713 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 16.128783 seconds.
+  path: Assets/Files/Scenes/MainMenu/Textures/invalidname.png
+  artifactKey: Guid(fe7ccd9d3c5e01a4e814dcdd43bab139) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Files/Scenes/MainMenu/Textures/invalidname.png using Guid(fe7ccd9d3c5e01a4e814dcdd43bab139) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '661d7e418965a3f3bb7f67f4ffe1c036') in 0.026622 seconds
+  Import took 0.029606 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.373357 seconds.
+  path: Assets/Files/Scenes/MainMenu/Textures/arrow.png
+  artifactKey: Guid(a809c26b55f466b41bf4ac12ef9be555) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Files/Scenes/MainMenu/Textures/arrow.png using Guid(a809c26b55f466b41bf4ac12ef9be555) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2fba4ac6cb35d9412d3f73aba2c5f85a') in 0.031379 seconds
+  Import took 0.034147 seconds .
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
