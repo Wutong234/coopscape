@@ -1,5 +1,11 @@
 // vis2k: GUILayout instead of spacey += ...; removed Update hotkeys to avoid
 // confusion if someone accidentally presses one.
+
+using System;
+using System.Collections;
+using System.Linq;
+using System.Net;
+using System.Net.Sockets;
 using UnityEngine;
 
 namespace Mirror
@@ -31,9 +37,32 @@ namespace Mirror
         /// </summary>
         public int offsetY;
 
+        /// <summary>
+        /// Outputs the current devices IP to gui input, useful if your are host/server.
+        /// Only use the WAN check when necessary, as it uses an external service.
+        /// For further connection information, visit: https://mirror-networking.com/docs/Articles/FAQ.html#how-to-connect
+        /// </summary>
+        [Tooltip("localhost for games on same device, LAN for different devices same network, WAN for external connections. See summary for more information.")]
+        [SerializeField]
+        private IPType _IPType = IPType.localhost;
+        private string inputField;
+        [System.Serializable]
+        private enum IPType : int { localhost = 0, LAN = 1, WAN = 2 }
+        private string lanIP = "";
+        private string wanIP = "";
+
+        private string[] _ipType;
+        private int _ipTypeSelectedIndex = 0;
+        private bool _ShowIpTypeDropdown;
+        private Vector2 scrollViewVector = Vector2.zero;
+
         void Awake()
         {
             manager = GetComponent<NetworkManager>();
+
+            SetIPInformation();
+
+            _ipType = Enum.GetNames(typeof(IPType));
         }
 
         void OnGUI()
@@ -74,6 +103,44 @@ namespace Mirror
         {
             if (!NetworkClient.active)
             {
+            
+                GUILayout.BeginHorizontal();
+                {
+                    GUILayout.Label($"IP Type : {_ipType[_ipTypeSelectedIndex]}");
+                    {
+                        if (GUILayout.Button("▼"))
+                        {
+                            _ShowIpTypeDropdown = !_ShowIpTypeDropdown;
+                        }
+                    }
+                }
+                GUILayout.EndHorizontal();
+
+                if (_ShowIpTypeDropdown)
+                {
+                    using (GUILayout.ScrollViewScope scope = new GUILayout.ScrollViewScope(scrollViewVector))
+                    {
+                        scrollViewVector = scope.scrollPosition;
+                        for (int index = 0; index < _ipType.Length; index++)
+                        {
+                            if (!GUILayout.Button(_ipType[index]))
+                            {
+                                continue;
+                            }
+                            else
+                            {
+                                if (index == 0) { _IPType = IPType.localhost; }
+                                else if (index == 1) { _IPType = IPType.LAN; }
+                                else if (index == 2) { _IPType = IPType.WAN; }
+                                SetIPInformation();
+                            }
+
+                            _ShowIpTypeDropdown = false;
+                            _ipTypeSelectedIndex = index;
+                        }
+                    }
+                }
+
                 // Server + Client
                 if (Application.platform != RuntimePlatform.WebGLPlayer)
                 {
@@ -87,9 +154,12 @@ namespace Mirror
                 GUILayout.BeginHorizontal();
                 if (GUILayout.Button("Client"))
                 {
+                    manager.networkAddress = inputField;
                     manager.StartClient();
                 }
-                manager.networkAddress = GUILayout.TextField(manager.networkAddress);
+                
+                inputField = GUILayout.TextField(inputField);
+                
                 GUILayout.EndHorizontal();
 
                 // Server Only
@@ -106,7 +176,7 @@ namespace Mirror
             else
             {
                 // Connecting
-                GUILayout.Label("Connecting to " + manager.networkAddress + "..");
+                GUILayout.Label("Connecting to " + inputField + "..");
                 if (GUILayout.Button("Cancel Connection Attempt"))
                 {
                     manager.StopClient();
@@ -121,9 +191,13 @@ namespace Mirror
             {
                 GUILayout.Label("Server: active. Transport: " + Transport.activeTransport);
             }
-            if (NetworkClient.isConnected)
+            if (NetworkServer.active)
             {
-                GUILayout.Label("Client: address=" + manager.networkAddress);
+                GUILayout.Label("Server address: " + inputField);
+            }
+            else if (NetworkClient.isConnected)
+            {
+                GUILayout.Label("Connected to: " + manager.networkAddress);
             }
         }
 
@@ -151,6 +225,61 @@ namespace Mirror
                 if (GUILayout.Button("Stop Server"))
                 {
                     manager.StopServer();
+                }
+            }
+        }
+
+        void SetIPInformation()
+        {
+            if (_IPType == IPType.localhost)
+            {
+                inputField = "localhost";
+                manager.networkAddress = inputField;
+            }
+            else if (_IPType == IPType.LAN)
+            {
+                StartCoroutine(GetLanAddress());
+            }
+            else if (_IPType == IPType.WAN)
+            {
+                StartCoroutine(GetWanAddress());
+            }
+        }
+
+        IEnumerator GetLanAddress()
+        {
+            if (lanIP != "") { inputField = lanIP; yield break; }
+            
+            #if UNITY_IOS
+            lanIP = System.Net.NetworkInformation.NetworkInterface.GetAllNetworkInterfaces().Where(x => x.Name.Equals("en0")).First().GetIPProperties().UnicastAddresses.Where(x => x.Address.AddressFamily == AddressFamily.InterNetwork).First().Address.ToString();
+            #else
+            lanIP = Dns.GetHostEntry(Dns.GetHostName()).AddressList.FirstOrDefault(ip => ip.AddressFamily == AddressFamily.InterNetwork).ToString();
+            #endif
+            
+            if (lanIP != "")
+            {
+                inputField = lanIP;
+                manager.networkAddress = lanIP;
+            }
+        }
+        
+        IEnumerator GetWanAddress()
+        {
+            if (wanIP != "") { inputField = wanIP; yield break; }
+            
+            using (UnityEngine.Networking.UnityWebRequest webRequest = UnityEngine.Networking.UnityWebRequest.Get("https://api.ipify.org/"))
+            {
+                yield return webRequest.SendWebRequest();
+
+                if (webRequest.isNetworkError || webRequest.isHttpError || webRequest.downloadHandler.text == "")
+                {
+                    Debug.Log("Public (WAN) IP Error: " + webRequest.error);
+                }
+                else
+                {
+                    wanIP = webRequest.downloadHandler.text;
+                    inputField = wanIP;
+                    manager.networkAddress = wanIP;
                 }
             }
         }
